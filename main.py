@@ -154,12 +154,17 @@ dot_button.grid(row=5, column=2)
 equal_button = Button(button_frame, text='=', width=6, height=2, bd=4, relief=RAISED, bg='#bad3ea',
                       font=('Courier', 25, 'bold'), command=equals)
 equal_button.grid(row=5, column=3)
-clear_button = Button(button_frame, text='clear', width=12, height=2, bd=10, relief=SUNKEN, bg='#bad3ea',
+parleft_button = Button(button_frame, text='(', width=6, height=2, bd=4, relief=SUNKEN, bg='#bad3ea',
+                        font=('Courier', 25, 'bold'), command=lambda: click('('))
+parleft_button.grid(row=6, column=0)
+parright_button = Button(button_frame, text=')', width=6, height=2, bd=4, relief=SUNKEN, bg='#bad3ea',
+                         font=('Courier', 25, 'bold'), command=lambda: click(')'))
+parright_button.grid(row=6, column=1)
+clear_button = Button(button_frame, text='clear', width=6, height=2, bd=4, relief=SUNKEN, bg='#bad3ea',
                       font=('Courier', 25, 'bold'), command=clear)
-clear_button.grid(row=6, column=0, columnspan=2)
-erase_button = Button(button_frame, text='erase', width=12, height=2, bd=10, relief=SUNKEN, bg='#bad3ea',
+clear_button.grid(row=6, column=2)
+erase_button = Button(button_frame, text='erase', width=6, height=2, bd=4, relief=SUNKEN, bg='#bad3ea',
                       font=('Courier', 25, 'bold'), command=erase)
-erase_button.grid(row=6, column=2, columnspan=2)
-
+erase_button.grid(row=6, column=3)
 
 root.mainloop()
